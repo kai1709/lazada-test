@@ -1,10 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Categories from './containers/Categories'
 import './App.scss';
 
 const App = () => {
   return (
-    <div className="app">Hello world</div>
+    <Router>
+      <div>
+      <Switch>
+          <Route path="/">
+            <Categories />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   )
 }
 
