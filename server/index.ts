@@ -21,6 +21,7 @@ app.get('/', (req, res) => res.send('API is running'));
 app.get('/category/list', CategoryControllers.getCategories)
 app.get('/category/:id', CategoryControllers.getCategoryById)
 app.get('/product/list', ProductControllers.getProducts)
+app.get('/product/:id', ProductControllers.getProductById)
 
 app.listen(config.PORT, () => {
   console.log(`⚡️[server]: Server is running at https://localhost:${config.PORT}`);

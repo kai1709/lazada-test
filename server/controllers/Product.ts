@@ -17,7 +17,7 @@ export const getProducts = async (req: express.Request, res: express.Response) =
 
 export const getProductById = async (req: express.Request, res: express.Response) => {
   const { productId } = req.params;
-  const product = await ProductModel.find({ itemId: productId })
+  const product = await ProductModel.findOne({ itemId: productId })
   if (!product) return res.status(500).send({
     success: false,
     message: 'Product not found'
