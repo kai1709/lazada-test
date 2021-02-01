@@ -1,5 +1,45 @@
+$light-green: #E1F8DC;
+$white: #ffffff;
+@font-face {
+  font-family: Overpass;
+  src: url('./assets/fonts/Overpass/overpass.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Overpass-Bold";
+  src: url('./assets/fonts/Overpass/Overpass-Bold.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+html {
+  display: flex;
+  flex: 1;
+  height: 100vh;
+  div {
+    display: flex;
+  }
+
+  a {
+    text-decoration: none;
+    color: unset
+  }
+}
+
 body {
-  margin: 0
+  margin: 0;
+  background-color: $light-green;
+  display: flex;
+  flex: 1;
+  font-family: 'Overpass';
+}
+
+#app {
+  display: flex;
+  flex: 1;
 }
 
 .app {
