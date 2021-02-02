@@ -4,20 +4,23 @@ import { connect } from 'react-redux';
 import { useParams } from 'react-router-dom'
 import { getProductById } from '../actions/category'
 import CircularIndeterminate from '../components/commons/Loading';
-import { withRouter } from 'react-router-dom'
+import { withRouter } from 'react-router-dom/cjs/react-router-dom.min'
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import './ProductDetail.scss'
 import Rating from '@material-ui/lab/Rating';
 
-const ProductDetail = (props) => {
+export const ProductDetail = (props) => {
   const { id } = useParams();
+
   useEffect(() => {
     props.getProductById(id)
   }, [])
+
   const product = props.productsData[id]
-  if (!product) return null
 
   if (props.isFetchingProduct) return <div><CircularIndeterminate /></div>
+
+  if (!product) return null
 
   return (
     <div className="product-detail">

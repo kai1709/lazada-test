@@ -12,7 +12,6 @@ export const Categories = (props) => {
   useEffect(() => {
     props.getCategories()
   }, [])
-
   return (
     <div className="category-container">
       <div className="header">All Categories</div>
@@ -20,9 +19,9 @@ export const Categories = (props) => {
       <div className="category-list">
         {props.isLoading ? <Loading /> : (
           <GridList cellHeight={160} className="grid-list" cols={3}>
-            {props.categories.map(category => (
-              <GridListTile key={category.id} cols={2}>
-                <CategoryCard key={category.id} category={category} cols={2} />
+            {props.categories.map((category, index) => (
+              <GridListTile key={category.id} cols={index === 0 ? 2 : index % 2}>
+                <CategoryCard key={category.id} category={category} />
               </GridListTile>
             ))}
           </GridList>

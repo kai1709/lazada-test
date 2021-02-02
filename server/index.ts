@@ -3,6 +3,7 @@ import config from './config'
 import { connectDatabase } from './database'
 import * as CategoryControllers from './controllers/Category'
 import * as ProductControllers from './controllers/Product'
+import CategoryModel from './models/Category'
 import bodyParser from 'body-parser'
 import cors from 'cors'
 

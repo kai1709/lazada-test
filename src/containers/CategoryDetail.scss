@@ -4,7 +4,22 @@
   display: flex;
   flex-direction: column;
   overflow: auto;
+  position: relative;
 
+  .button-back {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: #4caf50;
+  }
+
+  .no-products-text {
+    width:  100%;
+    text-align: center;
+    padding-top: 40px;
+    align-items: center;
+    justify-content: center;
+  }
   .category-header {
     width: 100%;
     height: 160px;
