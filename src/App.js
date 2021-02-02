@@ -8,7 +8,7 @@ import reducers from './reducers'
 import './App.scss';
 import { Paper, Container } from '@material-ui/core';
 import CategoryDetail from './containers/CategoryDetail';
-import { green } from '@material-ui/core/colors';
+import { lightGreen, orange } from '@material-ui/core/colors';
 import { createMuiTheme, withStyles, makeStyles, ThemeProvider } from '@material-ui/core/styles';
 import ProductDetail from './containers/ProductDetail';
 
@@ -16,7 +16,8 @@ const store = configureStore(reducers)
 
 const theme = createMuiTheme({
   palette: {
-    primary: green,
+    primary: lightGreen,
+    secondary: orange
   },
 });
 

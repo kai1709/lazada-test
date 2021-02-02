@@ -1,0 +1,88 @@
+$orange: #f57323;
+$grey: #9E9E9E;
+.product-detail {
+  position: relative;
+  padding: 40px;
+  padding-top: 60px;
+  flex: 1;
+  flex-direction: column;
+
+  .button-back {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: #4caf50;
+  }
+
+  .product-info-container {
+    display: flex;
+    height: 400px;
+    width: 100%;
+    margin-bottom: 40px;
+    .product-image {
+      flex: 1;
+      height: 400px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .product-info {
+      flex: 1;
+      padding-left: 20px;
+      display: block;
+      .title {
+        font-family: "Overpass-Bold";
+        font-size: 20px;
+        margin-bottom: 30px;
+      }
+
+      .rating {
+        margin-bottom: 30px;
+        .rating-count {
+          margin-left: 10px;
+        }
+      }
+
+      .price {
+        display: block;
+        margin-bottom: 30px;
+        .discount-price {
+          color: $orange;
+          font-size: 30px;
+        }
+
+        .product-price {
+          color: $grey;
+          font-size: 18px;
+          text-decoration: line-through;
+          margin-right: 10px;
+        }
+      }
+      .button-buy {
+        color: #ffffff;
+      }
+    }
+  }
+  .product-description {
+    flex: 1;
+    display: block;
+    margin-bottom: 40px;
+    .header {
+      font-size: 24;
+      font-weight: bold;
+    }
+  }
+
+  .product-reviews {
+    flex: 1;
+    display: block;
+    margin-bottom: 40px;
+    .header {
+      font-size: 24;
+      font-weight: bold;
+    }
+  }
+}
